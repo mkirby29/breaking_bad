@@ -10,9 +10,13 @@ body{
 
 h1{
     font-family: breakingFont;
-    font-size: 250px;
+    font-size: 200px;
     text-align: center;
     margin: auto;
     color: blue;
+}
+
+.container{
+
 }
 
