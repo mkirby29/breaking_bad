@@ -2,3 +2,17 @@ body{
     background: url(images/breaking_bad.jpg) no-repeat;
     background-size: 100%;
 }
+
+@font-face {
+    font-family: breakingFont;
+    src: url(breaking_bad/heart_breaking_bad.otf);
+}
+
+h1{
+    font-family: breakingFont;
+    font-size: 250px;
+    text-align: center;
+    margin: auto;
+    color: blue;
+}
+
