@@ -1,10 +1,9 @@
-$(document).ready(initializeApp());
+$("document").ready(launchApp);
 
-function initializeApp() {
-    themeMusic();
+function launchApp() {
+    $(".card").on("click", cardFlip)
 }
 
-function themeMusic() {
-    var x = document.getElementById("theme");
-    document.getElementById("music").innerHTML = x;
+function cardFlip() {
+    $(this).find(".back").hide();
 }
