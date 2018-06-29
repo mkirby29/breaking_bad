@@ -18,7 +18,7 @@ body{
 .logo{
     justify-content: flex-start;
     height: 90%;
-    width: 15%;
+    width: 12%;
 }
 h1{
     font-family: breakingFont;
@@ -49,10 +49,10 @@ h1{
     box-sizing: border-box;
 }
 #game-area{
-    width: 75%;
+    width: 65%;
     height: 55%;
     right: -12%;
-    margin-top: 100px;
+    margin-top: 120px;
     display: inline-block;
     position: relative;
 }
