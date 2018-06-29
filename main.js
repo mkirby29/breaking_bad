@@ -20,8 +20,10 @@ function cardFlip() {
             matchCounter++;
             firstCardClicked, secondCardClicked = null;
             if(matchCounter === totalPossibleMatches){
-                
+                $("#game-area").append($("<h1>").html("You Win"));
             }
+        }else{
+            
         }
     }
 }
