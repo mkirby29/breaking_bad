@@ -45,7 +45,7 @@ h1{
     position: relative;
     bottom: 35%;
 }
-*{
+* {
     box-sizing: border-box;
 }
 #game-area{
