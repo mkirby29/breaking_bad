@@ -27,16 +27,27 @@ function cardFlip() {
         clickable = false;
         var firstImage = $(firstCardClicked).find(".front > img").attr("src");
         var secondImage = $(secondCardClicked).find(".front > img").attr("src");
-        if(firstCardClicked === secondCardClicked){
+        if(firstCardClicked === secondCardClicked) {
             clickable = true;
             matchCounter++;
             firstCardClicked, secondCardClicked = null;
-            if(matchCounter === totalPossibleMatches){
+            if (matchCounter === totalPossibleMatches) {
                 $("#game-area").append($("<h1>").html("You Win"));
-            }else return;
+            } else {
+                console.log("didn't win");
+            }
         }else{
-
+            setTimeout(flipBack, 2000);
         }
+
     }
+}
+
+function flipBack() {
+    $(firstCardClicked).find(".back").removeClass("hide");
+    $(secondCardClicked).find(".back").removeClass("hide");
+    firstCardClicked = null;
+    secondCardClicked = null;
+    clickable = true;
 }
 
