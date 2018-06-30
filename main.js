@@ -4,7 +4,6 @@ var firstCardClicked = null;
 var secondCardClicked = null;
 var totalPossibleMatches = 9;
 var matchCounter = 0;
-var clickable = true;
 var matches = 0;
 var attempts = 0;
 var accuracy = 0;
@@ -12,42 +11,44 @@ var games_played = 0;
 
 function launchApp() {
     $(".card").on("click", cardFlip);
+    $(".resetButton").click(reset);
     startStats();
 }
 
 function cardFlip() {
-    if(clickable == false){
-        return
-    }
-    if($(this).find(".back").addClass("hide")){
+    if($(this).find(".back").hasClass("hide") === true){
         return;
     }
 
+    if(firstCardClicked !== null && secondCardClicked !== null){
+        return;
+    }
+
+    $(this).find(".back").addClass("hide");
+
     if(firstCardClicked === null){
         firstCardClicked = this;
-        $(firstCardClicked).find(".back").addClass("hide");
-    }else{
+    }
+    else{
         secondCardClicked = this;
-        $(secondCardClicked).find(".back").addClass("hide");
-        clickable = false;
-        var firstImage = $(firstCardClicked).find(".front > img").attr("src");
-        var secondImage = $(secondCardClicked).find(".front > img").attr("src");
-        if(firstCardClicked === secondCardClicked) {
-            clickable = true;
+        attempts++;
+        displayStats();
+        if($(firstCardClicked).find(".front > img").attr("src") === $(secondCardClicked).find(".front > img").attr("src")){
             matchCounter++;
             matches++;
-            firstCardClicked, secondCardClicked = null;
+            firstCardClicked = null;
+            secondCardClicked = null;
             displayStats();
-            if (matchCounter === totalPossibleMatches) {
-                $("#game-area").append($("<h1>").html("You Win"));
-            } else {
-                console.log("didn't win yet");
+            if(matchCounter === totalPossibleMatches){
+                console.log("You Win");
+            } else{
+                console.log("You didn't win yet");
             }
-        }else{
+
+        } else{
             setTimeout(flipBack, 2000);
             displayStats();
         }
-
     }
 }
 
@@ -56,21 +57,20 @@ function flipBack() {
     $(secondCardClicked).find(".back").removeClass("hide");
     firstCardClicked = null;
     secondCardClicked = null;
-    clickable = true;
 }
 
 function startStats() {
-    ++games_played;
-    $(".gamesPlayed.value").text(games_played);
-    $(".attempts.value").text(attempts);
-    $(".accuracy.value").text(accuracy + "%");
+    games_played++;
+    $(".gamesPlayed .value").text(games_played);
+    $(".attempts .value").text(attempts);
+    $(".accuracy .value").text(accuracy + "%");
 }
 
 function displayStats() {
-    $(".gamesPlayed.value").text(games_played);
-    $(".attempts.value").text(attempts);
+    $(".gamesPlayed .value").text(games_played);
+    $(".attempts .value").text(attempts);
     var accuracyPercentage = Math.round((matches/attempts) * 100) + "%";
-    $(".accuracy.value").text(accuracy);
+    $(".accuracy .value").text(accuracyPercentage);
 }
 
 function reset() {
@@ -81,5 +81,8 @@ function reset() {
     matchCounter = 0;
     attempts = 0;
     matches = 0;
+    startStats();
+    $(".card").on("click", cardFlip);
+    $(".card").find(".back").removeClass("hide");
 }
 
