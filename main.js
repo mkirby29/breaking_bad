@@ -10,12 +10,15 @@ var accuracy = 0;
 var games_played = 0;
 
 function launchApp() {
+    shuffle();
     $(".card").on("click", cardFlip);
     $(".resetButton").click(reset);
     startStats();
+    
 }
 
 function cardFlip() {
+    console.log('CARD FLIP ACTIVATED');
     if($(this).find(".back").hasClass("hide") === true){
         return;
     }
@@ -46,7 +49,7 @@ function cardFlip() {
             }
 
         } else{
-            setTimeout(flipBack, 2000);
+            setTimeout(flipBack, 1000);
             displayStats();
         }
     }
@@ -75,6 +78,7 @@ function displayStats() {
 
 function reset() {
     console.log("reset game");
+    $("#game-area").empty();
     firstCardClicked = null;
     secondCardClicked = null;
     totalPossibleMatches = 9;
@@ -82,7 +86,33 @@ function reset() {
     attempts = 0;
     matches = 0;
     startStats();
+    shuffle();
     $(".card").on("click", cardFlip);
     $(".card").find(".back").removeClass("hide");
+   
+
 }
 
+function shuffle(){
+    var images = ["images/hank.jpg", "images/hank.jpg", "images/jesse.jpg", "images/jesse.jpg", "images/krazy8.jpg", "images/krazy8.jpg",
+                  "images/marie.jpg", "images/marie.jpg", "images/skinnyPete.jpg", "images/skinnyPete.jpg", "images/skyler.jpg", "images/skyler.jpg",
+                  "images/tuco.jpg", "images/tuco.jpg", "images/walt_jr.jpg", "images/walt_jr.jpg", "images/walter_white_season1.jpg", "images/walter_white_season1.jpg"];
+    var randomImages = [];
+    
+    for(var index = 0; images.length > 0; index++){
+        var rand = Math.floor(Math.random() * images.length);
+        randomImages.push(images[rand]);
+        images.splice(rand, 1);
+    }
+    for(var create = 0; create < randomImages.length; create++){
+        var frontImage = $("<img>").attr("src", randomImages[create]).addClass("frontImage");
+        var cardFront = $("<div>").addClass("front");
+        // var backImage = $("<img>").attr("src", "images/season_1_poster.jpg");
+        var cardBack = $("<div>").addClass("back");
+        var card = $("<div>").addClass("card");
+        cardFront.append(frontImage);
+        // cardBack.append(backImage);
+        card.append(cardFront, cardBack);
+        $("#game-area").append(card);
+    }
+}

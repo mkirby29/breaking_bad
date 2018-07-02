@@ -69,29 +69,28 @@ h1{
 }
 .card{
     width: 12.6%;
-    height: 40%;
+    height: 45%;
     position: relative;
-    /*border: 1px solid red;*/
-    /*border-radius: 10px;*/
     display: inline-block;
     margin: 10px;
-}
-.front, .back{
+ } 
+.front{
     height: 100%;
     width: 100%;
     position: absolute;
     left: 0;
     top: 0;
-    border-radius: 10px;
 }
-.front{
-
-}
-.back{
+.back{ 
     background-image: url("images/season_1_poster.jpg");
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .frontImage{
     width: 100%;
