@@ -99,5 +99,5 @@ h1{
 .back.hide{display: none;
 }
 .card:hover{
-    box-shadow: 3px 3px deepskyblue;
+    box-shadow: 0 0 20px 5px deepskyblue;
 }
