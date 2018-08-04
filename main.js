@@ -64,12 +64,14 @@ function flipBack() {
 
 function startStats() {
     games_played++;
+    $(".matches .value").text(matches);
     $(".gamesPlayed .value").text(games_played);
     $(".attempts .value").text(attempts);
     $(".accuracy .value").text(accuracy + "%");
 }
 
 function displayStats() {
+    $(".matches .value").text(matches);
     $(".gamesPlayed .value").text(games_played);
     $(".attempts .value").text(attempts);
     var accuracyPercentage = Math.round((matches/attempts) * 100) + "%";
