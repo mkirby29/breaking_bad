@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Match Game</title>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-                crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="main.js"></script>
-
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <audio autoplay>
-        <source src="audio/breaking_theme.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+        <!-- <div class="box">
+            <audio controls autoplay class="theme">
+                <source src="audio/breaking_theme.mp3" type="audio/mpeg">
+            </audio>
+            <canvas id="canvas"></canvas>
+            <h1>Breaking Bad Match Game <br>Click to Begin</br></h1>
+            <input class="play" type="image" src="images/bluemeth.png" alt="submit"></input>
+        </div>
+        <script src="modal.js"></script>  -->
         <div class="header">
             <img class="logo" src="images/logo.png">
-            <h1>Matching</h1>
-            <h1>Bad</h1>
         </div>
     <div class="gameContent">
+            <h1>Matching Bad</h1>
         <div class="statsContainer">STATS
             <ul class="matches">
                 <li class="label">Matches:</li>
@@ -36,8 +38,8 @@
             <ul class="accuracy">
                 <li class="label">Accuracy:</li>
                 <li class="value"></li>
-                <button class="resetButton">Reset Game</button>
             </ul>
+            <button class="resetButton">Reset Game</button>
         </div>
         <div id="game-area"></div>
     </div>

@@ -10,11 +10,18 @@ var accuracy = 0;
 var games_played = 0;
 
 function launchApp() {
-    shuffle();
     $(".card").on("click", cardFlip);
     $(".resetButton").click(reset);
+    $(".gameContent").addClass("hideElement");
+    $(".play").on("click", modalStart);
+}
+
+function modalStart(){
+    console.log('clicked');
+    $(".box").addClass("hideElement");
+    $(".gameContent").removeClass("hideElement");
+    shuffle();
     startStats();
-    
 }
 
 function cardFlip() {
