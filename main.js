@@ -10,19 +10,36 @@ var accuracy = 0;
 var games_played = 0;
 
 function launchApp() {
-    $(".card").on("click", cardFlip);
-    $(".resetButton").click(reset);
+    $(".video").addClass("hideElement");
     $(".gameContent").addClass("hideElement");
+    $(".header").addClass("hideElement");
+    $(".win").addClass("hideElement");
+    $(".playAgain").addClass("hideElement");
     $(".play").on("click", modalStart);
+    $(".resetButton").click(reset);
 }
 
 function modalStart(){
     console.log('clicked');
     $(".box").addClass("hideElement");
+    $(".header").removeClass("hideElement");
     $(".gameContent").removeClass("hideElement");
+    $(".win").addClass("hideElement");
+    $("audio")[0].pause();
     shuffle();
+    $(".card").on("click", cardFlip);
     startStats();
 }
+
+function playVid() { 
+    $(".video")[0].play(); 
+    $(".video").on("ended", function() {
+        $(".video").addClass("hideElement");
+        $(".win").removeClass("hideElement");
+        $(".playAgain").removeClass("hideElement"); 
+     });
+    $(".playAgain").on("click", playAgain);
+} 
 
 function cardFlip() {
     console.log('CARD FLIP ACTIVATED');
@@ -51,6 +68,10 @@ function cardFlip() {
             displayStats();
             if(matchCounter === totalPossibleMatches){
                 console.log("You Win");
+                $(".gameContent").addClass("hideElement");
+                $(".header").addClass("hideElement");
+                $(".video").removeClass("hideElement");
+                playVid();
             } else{
                 console.log("You didn't win yet");
             }
@@ -98,8 +119,25 @@ function reset() {
     shuffle();
     $(".card").on("click", cardFlip);
     $(".card").find(".back").removeClass("hide");
-   
+}
 
+function playAgain(){
+    $(".gameContent").removeClass("hideElement");
+    $(".header").removeClass("hideElement");
+    $(".video").addClass("hideElement");
+    $(".win").addClass("hideElement");
+    $(".playAgain").addClass("hideElement");
+    $("#game-area").empty();
+    firstCardClicked = null;
+    secondCardClicked = null;
+    totalPossibleMatches = 9;
+    matchCounter = 0;
+    attempts = 0;
+    matches = 0;
+    startStats();
+    shuffle();
+    $(".card").on("click", cardFlip);
+    $(".card").find(".back").removeClass("hide");
 }
 
 function shuffle(){
@@ -119,9 +157,10 @@ function shuffle(){
         // var backImage = $("<img>").attr("src", "images/season_1_poster.jpg");
         var cardBack = $("<div>").addClass("back");
         var card = $("<div>").addClass("card");
-        cardFront.append(frontImage);
+        
         // cardBack.append(backImage);
         card.append(cardFront, cardBack);
+        cardFront.append(frontImage);
         $("#game-area").append(card);
     }
 }
