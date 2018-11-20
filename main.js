@@ -143,7 +143,7 @@ function playAgain(){
 function shuffle(){
     var images = ["images/hank.jpg", "images/hank.jpg", "images/jesse.jpg", "images/jesse.jpg", "images/krazy8.jpg", "images/krazy8.jpg",
                   "images/marie.jpg", "images/marie.jpg", "images/skinnyPete.jpg", "images/skinnyPete.jpg", "images/skyler.jpg", "images/skyler.jpg",
-                  "images/tuco.jpg", "images/tuco.jpg", "images/walt_jr.jpg", "images/walt_jr.jpg", "images/walter_white_season1.jpg", "images/walter_white_season1.jpg"];
+                  "images/tuco.jpg", "images/tuco.jpg", "images/walt_images.jpg", "images/walt_images.jpg", "images/walter_white_season1.jpg", "images/walter_white_season1.jpg"];
     var randomImages = [];
     
     for(var index = 0; images.length > 0; index++){
