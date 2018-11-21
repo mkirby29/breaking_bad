@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Match Game</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div class="box">
+            <audio controls autoplay>
+                <source src="audio/breaking_theme.mp3" type="audio/mpeg">
+            </audio>
+            <canvas id="canvas"></canvas>
+            <h1>Breaking Bad Match Game <br>Click to Begin</br></h1>
+            <input class="play" type="image" src="images/bluemeth.png" alt="submit"></input>
+        </div>
+        <script src="modal.js"></script>
+        <video class="video">
+            <source src="videos/youwin1.mp4" type="video/mp4">
+        </video>
+        <div class="header">
+            <h1 class="title">Matching Bad</h1>
+        </div>
+        <div>
+            <h1 class="win">You Win</h1>
+            <button class="playAgain">Play Again</button>
+        </div>
+        <div class="gameContent">
+            <div class="statsContainer">STATS
+                <ul class="matches">
+                    <li class="label">Matches:</li>
+                    <li class="value"></li>
+                </ul>
+                <ul class="gamesPlayed">
+                    <li class="label">Games Played:</li>
+                    <li class="value"></li>
+                </ul>
+                <ul class="attempts">
+                    <li class="label">Attempts:</li>
+                    <li class="value"></li>
+                </ul>
+                <ul class="accuracy">
+                    <li class="label">Accuracy:</li>
+                    <li class="value"></li>
+                </ul>
+                <ul>
+                    <button class="resetButton">Reset Game</button>
+                </ul>
+            </div>
+            <div id="game-area"></div>
+        </div>
+    </body>
+</html>
