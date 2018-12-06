@@ -6,8 +6,8 @@
 var canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d");
 
-canvas.height = document.body.offsetHeight;
-canvas.width = 300;
+// canvas.height = document.body.offsetHeight;
+// canvas.width = 300;
 
 var parts = [],
     minSpawnTime = 40,
@@ -96,5 +96,5 @@ smokeImage.onload = function () {
 window.onresize = resizeMe;
 window.onload = resizeMe;
 function resizeMe() {
-   canvas.height = document.body.offsetHeight;
+//    canvas.height = document.body.offsetHeight;
 }

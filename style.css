@@ -1,3 +1,7 @@
+* {
+    user-select: none;
+}
+
 body{
     background-image: url("images/breaking-bad-motorhome-rv.jpg");
     background-repeat: no-repeat;
@@ -39,12 +43,12 @@ body{
     font-family: breakingFont;
     text-align: center;
     font-size: 200px;
-    animation:blinkingText 0.5s infinite;
+    animation:blinkingText 1s infinite;
 }
 @keyframes blinkingText{
     0%{     color: blue;    }
     49%{    color: transparent; }
-    50%{    color: transparent; }
+    50%{    color: blue; }
     99%{    color: transparent;  }
     100%{   color: blue;    }
 }
@@ -66,6 +70,10 @@ body{
     text-align: left;
     background: rgba(0,0,0,.2);
     border-radius: 8px;
+}
+.statsContainer div {
+    padding-top: 5%;
+    text-align: center;
 }
 .label{
     list-style-type: none;
@@ -165,8 +173,9 @@ canvas{
     left: 0px;
 }
 .video{
-    width: 95%;
+    width: 90%;
     height: 95%;
+    margin: 0 5%;
     text-align: center;
 }
 .playAgain{
@@ -185,3 +194,32 @@ canvas{
 .hideElement{
     display: none;
 } 
+@media only screen and (max-width: 1000px){
+    .title{
+        position: absolute;
+        font-family: breakingFont;
+        font-size: 80px;
+        text-align: center;
+        color: blue;
+        margin: 0;
+        width: 50%;
+        left: 25%;
+        background: rgba(0,0,0,.1);
+    }
+    .box h1{
+        position: absolute;
+        font-family: breakingFont;
+        font-size: 80px;
+        color: yellow; 
+        text-align: center;
+        left: 3%;
+        bottom: 10%;
+    }
+    input{
+        width: 20%;
+        height: 30%;
+        position: absolute;
+        left: 40%;
+        top: 65%;
+    }
+}
