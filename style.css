@@ -194,7 +194,16 @@ canvas{
 .hideElement{
     display: none;
 } 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1025px){
+    .box{
+        background-image: url("images/modalbackground.png");
+        position: relative;
+        width: 80%;
+        height: 30%;
+        margin: auto;
+        box-shadow: 0 10px 10px rgba(0,0,0,.5);
+        top: 15%;
+    }
     .title{
         position: absolute;
         font-family: breakingFont;
@@ -213,7 +222,7 @@ canvas{
         color: yellow; 
         text-align: center;
         left: 3%;
-        bottom: 10%;
+        bottom: 15%;
     }
     input{
         width: 20%;
@@ -221,5 +230,39 @@ canvas{
         position: absolute;
         left: 40%;
         top: 65%;
+    }
+    .statsContainer{
+        position: relative;
+        top: 0%;
+        width: 19%;
+        height: 100%;
+        font-family: smoke;
+        color: silver;
+        text-shadow: 2px 2px 5px blue;
+        font-weight: bold;
+        font-size: 25px;
+        text-align: left;
+        background: rgba(0,0,0,.2);
+        border-radius: 8px;
+    }
+}
+@media only screen and (orientation: landscape){
+    .box{
+        background-image: url("images/modalbackground.png");
+        position: relative;
+        width: 80%;
+        height: 75%;
+        margin: auto;
+        box-shadow: 0 10px 10px rgba(0,0,0,.5);
+        top: 15%;
+    }
+    .box h1{
+        position: absolute;
+        font-family: breakingFont;
+        font-size: 80px;
+        color: yellow; 
+        text-align: center;
+        left: 3%;
+        bottom: 20%;
     }
 }
