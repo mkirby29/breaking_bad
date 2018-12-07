@@ -194,7 +194,7 @@ canvas{
 .hideElement{
     display: none;
 } 
-@media only screen and (max-width: 1025px){
+@media only screen and (max-width: 600px){
     .box{
         background-image: url("images/modalbackground.png");
         position: relative;
@@ -263,6 +263,13 @@ canvas{
         color: yellow; 
         text-align: center;
         left: 3%;
-        bottom: 20%;
+        bottom: 30%;
+    }
+    input{
+        width: 20%;
+        height: 30%;
+        position: absolute;
+        left: 40%;
+        top: 55%;
     }
 }
