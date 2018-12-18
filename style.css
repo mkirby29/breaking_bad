@@ -322,7 +322,7 @@ canvas{
     .box h1{
         position: absolute;
         font-family: breakingFont;
-        font-size: 120px;
+        font-size: 75px;
         color: yellow; 
         text-align: center;
         left: 8%;
