@@ -322,7 +322,7 @@ canvas{
     .box h1{
         position: absolute;
         font-family: breakingFont;
-        font-size: 70px;
+        font-size: 120px;
         color: yellow; 
         text-align: center;
         left: 8%;
@@ -344,12 +344,12 @@ canvas{
         position: relative;
         top: 5%;
         width: 21%;
-        height: 95%;
+        height: 85%;
         font-family: smoke;
         color: silver;
         text-shadow: 2px 2px 5px blue;
         font-weight: bold;
-        font-size: 15px;
+        font-size: 30px;
         text-align: left;
         background: rgba(0,0,0,.2);
         border-radius: 8px;
@@ -368,14 +368,14 @@ canvas{
     }
     #game-area{
         position: absolute;
-        width: 80%;
+        width: 78%;
         height: 83%;
         top: 17%;
         right: 0%;
     }
     .card{
-        width: 11%;
-        height: 26%;
+        width: 13%;
+        height: 28%;
         position: relative;
         display: inline-block;
         margin: 10px;
@@ -388,7 +388,7 @@ canvas{
         left: 28%;
         font-family: breakingFont;
         text-align: center;
-        font-size: 100px;
+        font-size: 180px;
         animation:blinkingText 1s infinite;
     }
     .playAgain{
@@ -396,12 +396,12 @@ canvas{
         background-color: orange;
         border-radius: 50%;
         color: red;
-        padding: 10px 25px;
+        padding: 35px 85px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 15px;
+        font-size: 25px;
         top: 55%;
-        left: 45%;
+        left: 40%;
     }
 }
