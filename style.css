@@ -25,11 +25,11 @@ body{
 .title{
     position: absolute;
     font-family: breakingFont;
-    font-size: 170px;
+    font-size: 115px;
     text-align: center;
     color: blue;
     margin: 0;
-    width: 75%;
+    width: 30%;
     height: 15%;
     left: 12%;
     background: rgba(0,0,0,.1);
@@ -38,7 +38,7 @@ body{
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 35%;
+    top: 12%;
     left: 30%;
     font-family: breakingFont;
     text-align: center;
@@ -61,12 +61,12 @@ body{
     position: relative;
     top: 5%;
     width: 22%;
-    height: 60%;
+    height: 94%;
     font-family: smoke;
     color: silver;
     text-shadow: 2px 2px 5px blue;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 33px;
     text-align: left;
     background: rgba(0,0,0,.2);
     border-radius: 8px;
@@ -95,10 +95,10 @@ body{
 }
 #game-area{
     position: absolute;
-    width: 75%;
+    width: 70%;
     height: 83%;
     top: 15%;
-    right: 3%;
+    right: 8%;
 }
 .card *{
     border-radius: 25px;
@@ -185,13 +185,13 @@ canvas{
     background-color: orange;
     border-radius: 50%;
     color: red;
-    padding: 65px 160px;
+    padding: 45px 120px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 35px;
-    top: 70%;
-    left: 35%;
+    top: 58%;
+    left: 40%;
 }
 .playAgain.hideElement, .hideElement {
     display: none;
