@@ -231,6 +231,7 @@ canvas{
         width: 75%;
         height: 9%;
         top: 5%;
+        left: 12%;
         background: rgba(0,0,0,.1);
     }
     #game-area{
@@ -274,6 +275,7 @@ canvas{
         width: 30%;
         height: 30%;
         left: 35%;
+        bottom: 5%;
         line-height: 25px;
         border-radius: 25px;
     }
