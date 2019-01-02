@@ -165,7 +165,7 @@ input{
     height: 30%;
     position: absolute;
     left: 40%;
-    top: 45%;
+    top: 60%;
 }
 canvas{
     position: absolute;
@@ -193,7 +193,7 @@ canvas{
     top: 70%;
     left: 35%;
 }
-.hideElement{
+.playAgain.hideElement, .hideElement {
     display: none;
 } 
 @media only screen and (max-width: 600px){
@@ -270,7 +270,7 @@ canvas{
         background-color: dodgerblue;
         color: white;
         text-align: center;
-        font-size: 30px;
+        font-size: 14px;
         width: 30%;
         height: 30%;
         left: 35%;
@@ -302,7 +302,7 @@ canvas{
         left: 30%;
     }
 }
-@media only screen and (orientation: landscape){
+@media only screen and (orientation: landscape) and (max-width: 900px) {
     .box{
         background-image: url("images/modalbackground.png");
         position: relative;
@@ -322,16 +322,16 @@ canvas{
     .box h1{
         position: absolute;
         font-family: breakingFont;
-        font-size: 75px;
+        font-size: 39px;
         color: yellow; 
         text-align: center;
-        left: 8%;
+        left: 4%;
         bottom: 55%;
     }
     .title{
         position: absolute;
         font-family: breakingFont;
-        font-size: 65px;
+        font-size: 70px;
         text-align: center;
         color: blue;
         margin: 0;
@@ -344,12 +344,12 @@ canvas{
         position: relative;
         top: 5%;
         width: 21%;
-        height: 85%;
+        height: 86%;
         font-family: smoke;
         color: silver;
         text-shadow: 2px 2px 5px blue;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 15px;
         text-align: left;
         background: rgba(0,0,0,.2);
         border-radius: 8px;
@@ -368,27 +368,27 @@ canvas{
     }
     #game-area{
         position: absolute;
-        width: 78%;
+        width: 66%;
         height: 83%;
         top: 17%;
-        right: 0%;
+        right: 12%;
     }
     .card{
-        width: 13%;
+        width: 11.33%;
         height: 28%;
         position: relative;
         display: inline-block;
-        margin: 10px;
+        margin: 8px;
      }
      .win{
         margin: 0;
         padding: 0;
         position: absolute;
         top: 15%;
-        left: 28%;
+        left: 23%;
         font-family: breakingFont;
         text-align: center;
-        font-size: 180px;
+        font-size: 158px;
         animation:blinkingText 1s infinite;
     }
     .playAgain{
@@ -401,7 +401,7 @@ canvas{
         text-decoration: none;
         display: inline-block;
         font-size: 25px;
-        top: 55%;
-        left: 40%;
+        top: 65%;
+        left: 34%;
     }
 }
