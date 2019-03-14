@@ -1,4 +1,4 @@
-$("document").ready(launchApp);
+$(document).ready(launchApp);
 
 var firstCardClicked = null;
 var secondCardClicked = null;
