@@ -32,7 +32,7 @@ body{
     width: 45%;
     height: 15%;
     left: 30%;
-    background: rgba(0,0,0,.1);
+    background: rgba(0,0,0,.5);
 }
 .win{
     margin: 0;
@@ -135,9 +135,10 @@ body{
 .back.hide{
     display: none;
 }
-.card:hover{
+.back:hover{
     box-shadow: 0 0 20px 5px deepskyblue;
     border-radius: 25px;
+    cursor: pointer;
 }
 .box{
     background-image: url("images/modalbackground.png");
