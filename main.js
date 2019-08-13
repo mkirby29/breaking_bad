@@ -32,9 +32,12 @@ function modalStart(){
 }
 
 function playVid() { 
+    $(".gameContent").addClass("hideElement");
     $(".video")[0].play(); 
     $(".video").on("ended", function() {
         $(".video").addClass("hideElement");
+        $(".gameContent").removeClass("hideElement");
+        $(".statsContainer").addClass("hideElement");
         $(".win").removeClass("hideElement");
         $(".playAgain").removeClass("hideElement"); 
      });
@@ -75,7 +78,6 @@ function cardFlip() {
             } else{
                 console.log("You didn't win yet");
             }
-
         } else{
             setTimeout(flipBack, 1000);
             displayStats();
@@ -115,6 +117,9 @@ function reset() {
     matchCounter = 0;
     attempts = 0;
     matches = 0;
+    if(matches < 9){
+        games_played--;
+    }
     startStats();
     shuffle();
     $(".card").on("click", cardFlip);
@@ -127,6 +132,7 @@ function playAgain(){
     $(".video").addClass("hideElement");
     $(".win").addClass("hideElement");
     $(".playAgain").addClass("hideElement");
+    $(".statsContainer").removeClass("hideElement");
     $("#game-area").empty();
     firstCardClicked = null;
     secondCardClicked = null;
